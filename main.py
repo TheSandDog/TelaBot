@@ -1,3 +1,3 @@
-if __name__ ==  '__main__':
-    import bot
-    # Intructions
+if __name__ == '__main__':
+  import telabot
+  # Intructions

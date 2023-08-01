@@ -4,7 +4,7 @@ import pyautogui
 
 stopFlag = False  # Global flag to stop loops gracefully
 
-def bot_move(interval, x, y, times):
+def bot_move(x, y, times, interval):
     try:
         i = 0
         while not stopFlag and i<times:
@@ -15,12 +15,12 @@ def bot_move(interval, x, y, times):
     except KeyboardInterrupt:
         print("stopFlag detected")
 
-def bot_random(interval, res_x, res_y, times):
+def bot_random(interval, x, y, times):
     try:
         i = 0
         while not stopFlag and i<times:
-            rand_x = random.randint(0, res_x - 1)
-            rand_y = random.randint(0, res_y - 1)
+            rand_x = random.randint(0, x - 1)
+            rand_y = random.randint(0, y - 1)
             pyautogui.moveTo(rand_x, rand_y)
             time.sleep(interval)
             print("Moved the mouse pointer to a random position without any errors")
